@@ -1,230 +1,194 @@
 {
-  "generated_at": "2026-09-14T19:40:42.291283+00:00",
+  "generated_at": "2026-09-30T14:28:28.016060+00:00",
   "period": {
-    "week_start": "2026-09-07",
-    "month_start": "2026-08-17",
-    "end": "2026-09-13"
+    "week_start": "2026-09-23",
+    "month_start": "2026-09-02",
+    "end": "2026-09-29"
   },
   "channel": {
-    "id": "UCPd9S8PyrN_w9kZ9DZ5nXJA",
-    "title": "SilentVision ",
-    "subscribers": 105,
+    "id": "UC6JlX3lps3k-ygVvNwULyKA",
+    "title": "How Come?",
+    "subscribers": 3,
     "hidden_subscribers": false,
-    "total_views": 62483,
-    "video_count": 144
+    "total_views": 2643,
+    "video_count": 22
   },
   "last_7_days": {
-    "views": 3230,
-    "watch_minutes": 620,
-    "subs_gained": 4,
+    "views": 6,
+    "watch_minutes": 0,
+    "subs_gained": 0,
     "subs_lost": 0,
-    "likes": 78,
-    "comments": 3,
+    "likes": 0,
+    "comments": 0,
     "shares": 0,
-    "avg_view_seconds": 20,
-    "avg_view_percent": 42.9
+    "avg_view_seconds": 6,
+    "avg_view_percent": 13.9
   },
   "last_28_days": {
-    "views": 18164,
-    "watch_minutes": 4173,
-    "subs_gained": 48,
-    "subs_lost": 5
+    "views": 2645,
+    "watch_minutes": 418,
+    "subs_gained": 4,
+    "subs_lost": 1
   },
   "top_videos": [
     {
-      "id": "4Q3ybfPDFyk",
-      "title": "The Hidden Blackout Behind Every Blink",
-      "views": 775,
-      "watch_minutes": 151,
-      "avg_view_percent": 41.0,
-      "likes": 15,
-      "url": "https://www.youtube.com/watch?v=4Q3ybfPDFyk"
+      "id": "nUJ33-RO6kE",
+      "title": "How Come a Shrimp Snaps a Bubble Hotter Than Sun?",
+      "views": 3,
+      "watch_minutes": 0,
+      "avg_view_percent": 13.2,
+      "likes": 0,
+      "url": "https://www.youtube.com/watch?v=nUJ33-RO6kE"
     },
     {
-      "id": "jqxt_rXbMyM",
-      "title": "The Sea Cucumber's Shocking Self\u2011Evisceration Survival Trick",
-      "views": 560,
-      "watch_minutes": 49,
-      "avg_view_percent": 33.7,
-      "likes": 3,
-      "url": "https://www.youtube.com/watch?v=jqxt_rXbMyM"
+      "id": "DybcgfGOgH8",
+      "title": "How Come You Get Goosebumps When You\u2019re Scared?",
+      "views": 2,
+      "watch_minutes": 0,
+      "avg_view_percent": 15.3,
+      "likes": 0,
+      "url": "https://www.youtube.com/watch?v=DybcgfGOgH8"
     },
     {
-      "id": "TRmdC117wxo",
-      "title": "Saturn's Rings: Younger Than Dinosaurs and Destined to Vanish",
-      "views": 352,
-      "watch_minutes": 93,
-      "avg_view_percent": 47.2,
-      "likes": 10,
-      "url": "https://www.youtube.com/watch?v=TRmdC117wxo"
+      "id": "8C0Z00KtSCs",
+      "title": "How Come Your Nose Chooses a Side to Breathe?",
+      "views": 1,
+      "watch_minutes": 0,
+      "avg_view_percent": 0.0,
+      "likes": 0,
+      "url": "https://www.youtube.com/watch?v=8C0Z00KtSCs"
     },
     {
-      "id": "XmzZTWvnaSA",
-      "title": "Saturn\u2019s Rings: A Brilliant Birth and Inevitable Death",
-      "views": 290,
-      "watch_minutes": 58,
-      "avg_view_percent": 46.6,
-      "likes": 10,
-      "url": "https://www.youtube.com/watch?v=XmzZTWvnaSA"
-    },
-    {
-      "id": "IY3onZh6JCQ",
-      "title": "The SHOCKING Truth About Enceladus' Ice Geysers",
-      "views": 288,
-      "watch_minutes": 71,
-      "avg_view_percent": 46.0,
-      "likes": 11,
-      "url": "https://www.youtube.com/watch?v=IY3onZh6JCQ"
-    },
-    {
-      "id": "h0dB3gBHQXo",
-      "title": "The Yeti Crab: Nature\u2019s Deep\u2011Sea Bacterial Farmer",
-      "views": 279,
-      "watch_minutes": 48,
-      "avg_view_percent": 33.0,
-      "likes": 9,
-      "url": "https://www.youtube.com/watch?v=h0dB3gBHQXo"
-    },
-    {
-      "id": "jJzmIV-WjPA",
-      "title": "The Thorny Devil: Desert Lizard That Drinks Rain Without a Mouth",
-      "views": 187,
-      "watch_minutes": 26,
-      "avg_view_percent": 30.6,
-      "likes": 1,
-      "url": "https://www.youtube.com/watch?v=jJzmIV-WjPA"
-    },
-    {
-      "id": "KF-2W8NtH00",
-      "title": "Venus Spins Backward: A Day Longer Than Its Year",
-      "views": 149,
-      "watch_minutes": 30,
-      "avg_view_percent": 37.2,
-      "likes": 7,
-      "url": "https://www.youtube.com/watch?v=KF-2W8NtH00"
+      "id": "LCi6tMJWyig",
+      "title": "How Come Tuatara Has a Third Eye?",
+      "views": 0,
+      "watch_minutes": 0,
+      "avg_view_percent": 0.0,
+      "likes": 0,
+      "url": "https://www.youtube.com/watch?v=LCi6tMJWyig"
     }
   ],
   "analytics_error": null,
   "recent_uploads": [
     {
-      "id": "VgxWvkJYTY8",
-      "title": "The Snail That Wears Iron Armor Deep Under the Sea",
-      "published_at": "2026-09-14T19:02:49Z",
-      "duration_seconds": 51,
-      "views": 35,
-      "likes": 1,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=VgxWvkJYTY8"
-    },
-    {
-      "id": "K4jgIaf2bzg",
-      "title": "The SHOCKING Truth About Venus\u2019s Endless Day",
-      "published_at": "2026-09-14T13:52:55Z",
+      "id": "WrUn5_seCS0",
+      "title": "How Come Your Skin Forms Tiny Armor When Cold?",
+      "published_at": "2026-09-30T14:22:09Z",
       "duration_seconds": 48,
       "views": 1,
       "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=K4jgIaf2bzg"
+      "url": "https://www.youtube.com/watch?v=WrUn5_seCS0"
     },
     {
-      "id": "iMxpinUlgoU",
-      "title": "The Shrimp That Fires a Bubble Hotter Than the Sun",
-      "published_at": "2026-09-13T22:04:53Z",
-      "duration_seconds": 46,
-      "views": 1,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=iMxpinUlgoU"
-    },
-    {
-      "id": "KiLDiKCTc8E",
-      "title": "Venus' Backward Sunrise: Day Longer Than Its Year",
-      "published_at": "2026-09-13T17:14:18Z",
-      "duration_seconds": 51,
-      "views": 11,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=KiLDiKCTc8E"
-    },
-    {
-      "id": "FDwnZxWYSbg",
-      "title": "The SHOCKING Truth About Your Heart\u2019s Own Brain",
-      "published_at": "2026-09-13T12:44:15Z",
-      "duration_seconds": 47,
-      "views": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=FDwnZxWYSbg"
-    },
-    {
-      "id": "IY3onZh6JCQ",
-      "title": "The SHOCKING Truth About Enceladus' Ice Geysers",
-      "published_at": "2026-09-12T21:58:42Z",
-      "duration_seconds": 51,
-      "views": 295,
-      "likes": 11,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=IY3onZh6JCQ"
-    },
-    {
-      "id": "3WUgqL0lA-Q",
-      "title": "The Hidden Inner Ear Trick That Masks Earth's 1,000\u2011mph Spin",
-      "published_at": "2026-09-12T16:44:53Z",
+      "id": "LCi6tMJWyig",
+      "title": "How Come Tuatara Has a Third Eye?",
+      "published_at": "2026-09-22T05:50:07Z",
       "duration_seconds": 52,
-      "views": 5,
+      "views": 1,
       "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=3WUgqL0lA-Q"
+      "url": "https://www.youtube.com/watch?v=LCi6tMJWyig"
     },
     {
-      "id": "TTYxOtfw9_o",
-      "title": "The Antarctic Icefish: Blood So Clear It Defies Biology",
-      "published_at": "2026-09-12T11:39:23Z",
-      "duration_seconds": 54,
-      "views": 3,
+      "id": "DybcgfGOgH8",
+      "title": "How Come You Get Goosebumps When You\u2019re Scared?",
+      "published_at": "2026-09-21T22:27:39Z",
+      "duration_seconds": 45,
+      "views": 4,
       "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=TTYxOtfw9_o"
+      "url": "https://www.youtube.com/watch?v=DybcgfGOgH8"
     },
     {
-      "id": "R_mjz-IH-to",
-      "title": "The Hidden Tear Film: Your Eyes' Secret Watering System",
-      "published_at": "2026-09-11T22:13:38Z",
+      "id": "nUJ33-RO6kE",
+      "title": "How Come a Shrimp Snaps a Bubble Hotter Than Sun?",
+      "published_at": "2026-09-21T18:02:32Z",
       "duration_seconds": 47,
-      "views": 9,
+      "views": 10,
       "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=R_mjz-IH-to"
+      "url": "https://www.youtube.com/watch?v=nUJ33-RO6kE"
     },
     {
-      "id": "teesEf9ALtI",
-      "title": "The Ghost Fish: Antarctica\u2019s Bloodless Predator",
-      "published_at": "2026-09-11T17:30:59Z",
-      "duration_seconds": 48,
+      "id": "z1qWeF579xY",
+      "title": "How Come a Day on Venus Is Longer Than Its Year?",
+      "published_at": "2026-09-21T05:51:50Z",
+      "duration_seconds": 47,
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=z1qWeF579xY"
+    },
+    {
+      "id": "eHC_CwsbhpM",
+      "title": "How Come Tuatara Have a Third Eye?",
+      "published_at": "2026-09-20T21:12:42Z",
+      "duration_seconds": 47,
       "views": 3,
       "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=teesEf9ALtI"
+      "url": "https://www.youtube.com/watch?v=eHC_CwsbhpM"
     },
     {
-      "id": "Mp_Mhudb_uY",
-      "title": "Enceladus: Moon Shooting Water Jets Taller Than the Eiffel Tower",
-      "published_at": "2026-09-11T12:11:36Z",
+      "id": "K1CqNGbsN2Y",
+      "title": "How Come Venus Spins Backwards?",
+      "published_at": "2026-09-20T15:41:52Z",
+      "duration_seconds": 49,
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=K1CqNGbsN2Y"
+    },
+    {
+      "id": "-B63lgYKpsI",
+      "title": "How Come Your Stomach Regenerates Every Few Days?",
+      "published_at": "2026-09-20T05:41:58Z",
       "duration_seconds": 46,
-      "views": 136,
-      "likes": 10,
+      "views": 1,
+      "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=Mp_Mhudb_uY"
+      "url": "https://www.youtube.com/watch?v=-B63lgYKpsI"
     },
     {
-      "id": "h0dB3gBHQXo",
-      "title": "The Yeti Crab: Nature\u2019s Deep\u2011Sea Bacterial Farmer",
-      "published_at": "2026-09-10T22:15:14Z",
-      "duration_seconds": 55,
-      "views": 262,
-      "likes": 9,
+      "id": "z7V3m6ew2aE",
+      "title": "How Come Your Tailbone Hurts When You Sit?",
+      "published_at": "2026-09-19T15:35:18Z",
+      "duration_seconds": 43,
+      "views": 25,
+      "likes": 0,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=h0dB3gBHQXo"
+      "url": "https://www.youtube.com/watch?v=z7V3m6ew2aE"
+    },
+    {
+      "id": "yyf7kHDCYqY",
+      "title": "How Come Yeti Crab Farms Bacteria on Its Claws?",
+      "published_at": "2026-09-19T05:27:21Z",
+      "duration_seconds": 47,
+      "views": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=yyf7kHDCYqY"
+    },
+    {
+      "id": "W6VTF4SUrD0",
+      "title": "How Come Your Heart Beats Without Your Brain?",
+      "published_at": "2026-09-18T21:27:16Z",
+      "duration_seconds": 47,
+      "views": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=W6VTF4SUrD0"
+    },
+    {
+      "id": "2omUJk0-SPw",
+      "title": "How Come the Solenodon Has a Venomous Bite?",
+      "published_at": "2026-09-18T16:03:54Z",
+      "duration_seconds": 46,
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=2omUJk0-SPw"
     }
   ]
 }
