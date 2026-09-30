@@ -31,21 +31,22 @@ TOPICS = [
         ],
         "hashtags": "#animalfacts #curiosity #education #facts #shorts",
     },
-    {
-        "niche": "human_body",
+     {
+        "niche": "pets_and_farm",
         "prompt_hint": (
-            "one surprising, verifiable fact about the human body or brain. "
-            "Something people feel every day but never understood, like a "
-            "hidden organ trick, a sense glitch, or a survival leftover."
+            "one surprising, verifiable fact about a common pet or farm "
+            "animal (dog, cat, horse, cow, chicken, rabbit, etc). The animal "
+            "should be instantly recognizable, but the fact must be "
+            "genuinely surprising."
         ),
         "visual_keywords": [
-            "human eye closeup",
-            "brain scan",
-            "heartbeat",
-            "hands closeup",
-            "medical science",
+            "dog closeup",
+            "cat closeup",
+            "horse farm",
+            "farm animals",
+            "rabbit closeup",
         ],
-        "hashtags": "#curiosity #education #facts #science #shorts",
+        "hashtags": "#petfacts #curiosity #education #facts #shorts",
     },
     {
         "niche": "space_wow",
