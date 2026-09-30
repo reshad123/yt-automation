@@ -14,21 +14,22 @@ load_dotenv(Path(__file__).resolve().parent / ".env")
 # facts outperform motivation and finance by a wide margin.
 TOPICS = [
     {
-        "niche": "rare_animals",
+        "niche": "animal_facts",
         "prompt_hint": (
-            "one surprising, verifiable fact about a rare, weird, or "
-            "extreme animal. Pick a specific creature people have not "
-            "heard of, or a known animal with a shocking survival trick. "
-            "Make it feel like a nature documentary secret, not a kids show."
+            "one surprising, verifiable fact about a common, well-known animal "
+            "(dog, cat, elephant, shark, lion, bird, octopus, bear, horse, etc). "
+            "The animal should be instantly recognizable, but the fact must be "
+            "genuinely surprising -- a hidden ability, survival trick, or "
+            "biological quirk most people don't know."
         ),
         "visual_keywords": [
-            "wildlife closeup",
-            "jungle animal",
-            "ocean creature",
-            "frog rainforest",
-            "crocodile river",
+            "dog closeup",
+            "cat closeup",
+            "wildlife nature",
+            "ocean animal",
+            "bird flying",
         ],
-        "hashtags": "#curiosity #education #facts #science #shorts",
+        "hashtags": "#animalfacts #curiosity #education #facts #shorts",
     },
     {
         "niche": "human_body",
