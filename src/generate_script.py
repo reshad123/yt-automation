@@ -123,7 +123,9 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
         f"Target about {TARGET_DURATION_SECONDS} seconds spoken. "
         f"Write enough for a {TARGET_DURATION_SECONDS} second read-aloud: "
         f"{MIN_SCRIPT_WORDS - 12}-{MAX_SCRIPT_WORDS - 12} words before the follow line. "
-        f"Do not reuse any of these already-posted facts: {avoid}"
+        f"Do not reuse any of these already-posted facts or animals: {avoid}. "
+        f"If a fact about this general topic has already been used, pick a "
+        f"completely different animal, not just a different phrasing of the same fact."
     )
     if length_hint:
         user_prompt += f"\n{length_hint}"
