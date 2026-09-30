@@ -100,12 +100,12 @@ def _build_caption_clips(word_timings: list, video_duration: float):
             TextClip(
                 text=text,
                 font_size=FONT_SIZE,
-                color=CAPTION_COLOR,
+                color="black",
                 font=CAPTION_FONT,
-                stroke_color="black",
+                stroke_color="white",
                 stroke_width=3,
                 method="caption",
-                size=(int(VIDEO_WIDTH * 0.85), None),
+                size=(int(VIDEO_WIDTH * 0.75), None),
             )
             .with_position(("center", int(VIDEO_HEIGHT * 0.55)))
             .with_start(start)
