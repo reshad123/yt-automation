@@ -122,7 +122,7 @@ def run_pipeline(slot: int = 0):
         description=description,
         tags=script_data["keywords"],
     )
-    record_used_topic(script_data.get("topic_key") or script_data.get("title") or "")
+    record_used_topic(script_data.get("title") or script_data.get("topic_key") or "")
     notify_posted(
         title=script_data["title"],
         video_id=(result or {}).get("id") or "",
