@@ -124,9 +124,9 @@ def _title_card(title: str, hold: float):
         TextClip(
             text=text,
             font_size=46,
-            color="white",
+            color="black",
             font=CAPTION_FONT,
-            stroke_color="black",
+            stroke_color="white",
             stroke_width=3,
             method="caption",
             size=(int(VIDEO_WIDTH * 0.9), None),
