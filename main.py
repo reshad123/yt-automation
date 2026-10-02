@@ -123,6 +123,9 @@ def run_pipeline(slot: int = 0):
         tags=script_data["keywords"],
     )
     record_used_topic(script_data.get("title") or script_data.get("topic_key") or "")
+    first_keyword = (script_data.get("keywords") or [""])[0]
+    if first_keyword:
+        record_used_topic(first_keyword)
     notify_posted(
         title=script_data["title"],
         video_id=(result or {}).get("id") or "",
