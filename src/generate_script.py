@@ -150,6 +150,17 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             print(last_error)
             return False
 
+        if topic_key_lower and any(
+            topic_key_lower in u or u in topic_key_lower
+            for u in used_lower
+            if u and len(u) > 4
+        ):
+            last_error = (
+                f"{model} repeated a similar fact across history: {topic_key_lower}"
+            )
+            print(last_error)
+            return False
+
         first_keyword = (candidate.get("keywords") or [""])[0].strip().lower()
         if first_keyword and any(
             first_keyword in subj or subj in first_keyword
