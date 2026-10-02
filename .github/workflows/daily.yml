@@ -104,6 +104,15 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           POST_SLOT: ${{ steps.slot.outputs.slot }}
         run: python main.py
+        
+      - name: Upload video artifact (backup)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ github.run_id }}
+          path: workdir/final.mp4
+          if-no-files-found: ignore
+          retention-days: 3
 
       - name: Save used topics
         if: success()
