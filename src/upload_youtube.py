@@ -53,7 +53,8 @@ def upload_video(video_path: str, title: str, description: str, tags: list):
         },
         method="POST",
     )
-    with urllib.request.urlopen(init_req, timeout=30) as resp:
+    try:
+        with urllib.request.urlopen(init_req, timeout=30) as resp:
             upload_session_url = resp.headers.get("Location")
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
