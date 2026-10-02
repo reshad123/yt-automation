@@ -28,6 +28,7 @@ GROQ_MODELS = (
 MIN_SCRIPT_WORDS = 122
 MAX_SCRIPT_WORDS = 148
 SCRIPT_ATTEMPTS = 6
+RECENT_SUBJECT_WINDOW = 6
 
 
 def _with_cta(script: str) -> str:
@@ -42,7 +43,7 @@ def _with_cta(script: str) -> str:
 
 
 def record_used_topic(topic_key: str) -> None:
-    """Remember a fact only after the Short is long enough to upload."""
+    """Remember a fact (or subject keyword) only after the Short uploads."""
     key = (topic_key or "").strip().lower()
     if not key:
         return
@@ -136,6 +137,7 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
     best_distance = None
     target_words = (MIN_SCRIPT_WORDS + MAX_SCRIPT_WORDS) // 2
     used_lower = [str(u).lower() for u in used]
+    recent_subjects = used_lower[-RECENT_SUBJECT_WINDOW:]
 
     def _score_candidate(candidate, model):
         nonlocal last_error, data, best, best_distance
@@ -154,6 +156,18 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             topic_key_lower and topic_key_lower in used_lower
         ):
             last_error = f"{model} repeated an already-used topic: {candidate['title']}"
+            print(last_error)
+            return False
+
+        first_keyword = (candidate.get("keywords") or [""])[0].strip().lower()
+        if first_keyword and any(
+            first_keyword in subj or subj in first_keyword
+            for subj in recent_subjects
+            if subj
+        ):
+            last_error = (
+                f"{model} reused a recently-covered subject: {first_keyword}"
+            )
             print(last_error)
             return False
 
