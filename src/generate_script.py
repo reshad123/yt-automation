@@ -101,13 +101,13 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
         "'How Come the Moon Has a Permanent Dark Side?', "
         "'How Come the Mantis Shrimp Sees Colors We Cannot Even Imagine?'. "
         "Title must be under 50 characters, no hashtags in the title. "
-       "keywords must directly match the exact subject named in the title — if "
-"the title is about a nose, the first keyword must be 'nose closeup', not "
-"'face' or a generic body part. Use the literal noun from the script's "
-"main subject as the first keyword, then 1-2 broader fallback terms "
-"(e.g. 'human body macro', 'skin closeup') in case the exact term has no "
-"stock footage. Never substitute a different body part or animal than "
-"the one actually discussed. "
+        "keywords must directly match the exact subject named in the title — if "
+        "the title is about a nose, the first keyword must be 'nose closeup', not "
+        "'face' or a generic body part. Use the literal noun from the script's "
+        "main subject as the first keyword, then 1-2 broader fallback terms "
+        "(e.g. 'human body macro', 'skin closeup') in case the exact term has no "
+        "stock footage. Never substitute a different body part or animal than "
+        "the one actually discussed. "
         "Output ONLY valid JSON, no markdown fences. "
         "JSON schema: "
         '{"title": "<catchy title>", '
@@ -135,6 +135,7 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
     best = None
     best_distance = None
     target_words = (MIN_SCRIPT_WORDS + MAX_SCRIPT_WORDS) // 2
+    used_lower = [str(u).lower() for u in used]
 
     def _score_candidate(candidate, model):
         nonlocal last_error, data, best, best_distance
@@ -146,6 +147,16 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             last_error = f"{model} returned empty title or script"
             print(last_error)
             return False
+
+        title_lower = candidate["title"].strip().lower()
+        topic_key_lower = (candidate.get("topic_key") or "").strip().lower()
+        if title_lower in used_lower or (
+            topic_key_lower and topic_key_lower in used_lower
+        ):
+            last_error = f"{model} repeated an already-used topic: {candidate['title']}"
+            print(last_error)
+            return False
+
         distance = abs(word_count - target_words)
         if best is None or distance < best_distance:
             best = candidate
@@ -187,9 +198,10 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
         extra = ""
         if attempt > 0:
             extra = (
-                f" Previous draft was the wrong length. Rewrite it to "
-                f"{MIN_SCRIPT_WORDS}-{MAX_SCRIPT_WORDS} spoken words including "
-                f"a natural ending. Expand the payoff and twist with concrete "
+                f" Previous draft was the wrong length or a repeated topic. "
+                f"Rewrite it to {MIN_SCRIPT_WORDS}-{MAX_SCRIPT_WORDS} spoken words "
+                f"including a natural ending, on a genuinely different animal or "
+                f"fact than before. Expand the payoff and twist with concrete "
                 f"detail. Do not pad with filler."
             )
         messages = [
