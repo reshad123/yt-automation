@@ -17,14 +17,11 @@ from config import END_CTA, TARGET_DURATION_SECONDS
 USED_TOPICS_PATH = Path(__file__).resolve().parent.parent / "reports" / "used_topics.json"
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-# Groq shut down llama-3.3-70b-versatile and llama-3.1-8b-instant on 2026-08-16.
 GROQ_MODELS = (
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
     "qwen/qwen3.6-27b",
 )
-# Counted after the follow CTA is attached. ~2.7 words/sec on GuyNeural
-# lands 122-140 words near 45 seconds.
 MIN_SCRIPT_WORDS = 122
 MAX_SCRIPT_WORDS = 148
 SCRIPT_ATTEMPTS = 6
@@ -32,7 +29,6 @@ RECENT_SUBJECT_WINDOW = 6
 
 
 def _with_cta(script: str) -> str:
-    """Make sure the spoken follow line is at the end, once."""
     text = (script or "").strip()
     lowered = text.lower()
     if "follow this channel" in lowered or "subscribe" in lowered:
@@ -43,7 +39,6 @@ def _with_cta(script: str) -> str:
 
 
 def record_used_topic(topic_key: str) -> None:
-    """Remember a fact (or subject keyword) only after the Short uploads."""
     key = (topic_key or "").strip().lower()
     if not key:
         return
@@ -61,10 +56,6 @@ def record_used_topic(topic_key: str) -> None:
 
 
 def generate_script(topic: dict, length_hint: str = "") -> dict:
-    """
-    Returns a dict: {"title": ..., "script": ..., "keywords": [...]}
-    'script' is the exact narration text (what the TTS voice will read).
-    """
     api_key = os.environ["GROQ_API_KEY"]
     used = []
     if USED_TOPICS_PATH.exists():
