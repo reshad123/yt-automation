@@ -48,22 +48,6 @@ TOPICS = [
         ],
         "hashtags": "#petfacts #curiosity #education #facts #shorts",
     },
-    {
-        "niche": "space_wow",
-        "prompt_hint": (
-            "one surprising, verifiable space fact with a concrete image "
-            "people can picture: a planet, star, moon, astronaut body "
-            "change, or cosmic object. Avoid vague 'space is big' lines."
-        ),
-        "visual_keywords": [
-            "outer space stars",
-            "earth from space",
-            "astronaut",
-            "galaxy nebula",
-            "moon surface",
-        ],
-        "hashtags": "#curiosity #education #spacefacts #science #shorts",
-    },
 ]
 
 
