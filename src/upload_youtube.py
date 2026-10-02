@@ -17,6 +17,7 @@ so this comfortably supports one video/day.
 import os
 import json
 import urllib.request
+import urllib.error
 
 from src.youtube_auth import get_access_token
 
@@ -53,7 +54,10 @@ def upload_video(video_path: str, title: str, description: str, tags: list):
         method="POST",
     )
     with urllib.request.urlopen(init_req, timeout=30) as resp:
-        upload_session_url = resp.headers.get("Location")
+            upload_session_url = resp.headers.get("Location")
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"YouTube upload init failed ({exc.code}): {body}") from exc
 
     # Step 2: upload the actual video bytes
     file_size = os.path.getsize(video_path)
