@@ -17,7 +17,9 @@ on:
     - cron: "0 12 * * *"
     - cron: "0 19 * * *"
     - cron: "0 1 * * *"
-
+concurrency:
+    group: daily-youtube-short
+    cancel-in-progress: false
 permissions:
   contents: write
 
