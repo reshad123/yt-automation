@@ -19,8 +19,8 @@ USED_TOPICS_PATH = Path(__file__).resolve().parent.parent / "reports" / "used_to
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODELS = (
     "openai/gpt-oss-120b",
-    "qwen/qwen3.8-27b",
     "openai/gpt-oss-20b",
+    "qwen/qwen3.6-27b",
 )
 MIN_SCRIPT_WORDS = 122
 MAX_SCRIPT_WORDS = 148
@@ -70,10 +70,14 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
         "weird human-body facts, and concrete space wow facts. "
         "Do not write motivation, finance, self-help, or generic trivia. "
         "Structure the narration in this order: "
-        "1) HOOK: first sentence, 8-12 words, a stop-the-scroll claim. "
-        "Open with a contradiction, a hidden mechanism, or a fact that "
-        "sounds impossible. Never start with Did you know, Imagine, "
-        "What if, Hey, or Welcome. "
+        "1) HOOK: the very first 4-6 words must contain the most shocking "
+        "part of the fact itself, not a windup to it. Lead with the "
+        "specific surprising claim immediately, e.g. 'Cows have best "
+        "friends' not 'Did you know cows have'. Open with a contradiction, "
+        "a hidden mechanism, or a fact that sounds impossible, stated "
+        "directly in the first clause. Never start with Did you know, "
+        "Imagine, What if, Hey, Welcome, or any throat-clearing phrase "
+        "before the actual claim. "
         "2) PAYOFF: one widely reported scientific fact with a concrete "
         "image people can picture. "
         "3) TWIST: the weirder detail that makes the fact land. "
@@ -192,13 +196,7 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             "model": model,
             "messages": messages,
             "temperature": 0.7,
-            "max_completion_tokens": 2048,
         }
-        if model.startswith("openai/gpt-oss"):
-            payload["reasoning_effort"] = "low"
-            payload["include_reasoning"] = False
-        elif model.startswith("qwen/"):
-            payload["reasoning_format"] = "hidden"
         if force_json:
             payload["response_format"] = {"type": "json_object"}
         req = urllib.request.Request(
