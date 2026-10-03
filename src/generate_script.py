@@ -192,7 +192,13 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             "model": model,
             "messages": messages,
             "temperature": 0.7,
+            "max_completion_tokens": 2048,
         }
+        if model.startswith("openai/gpt-oss"):
+            payload["reasoning_effort"] = "low"
+            payload["include_reasoning"] = False
+        elif model.startswith("qwen/"):
+            payload["reasoning_format"] = "hidden"
         if force_json:
             payload["response_format"] = {"type": "json_object"}
         req = urllib.request.Request(
