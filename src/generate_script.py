@@ -20,7 +20,7 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODELS = (
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
-    "qwen/qwen3.6-27b",
+    "qwen/qwen3-32b",
 )
 MIN_SCRIPT_WORDS = 122
 MAX_SCRIPT_WORDS = 148
