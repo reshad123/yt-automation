@@ -19,8 +19,8 @@ USED_TOPICS_PATH = Path(__file__).resolve().parent.parent / "reports" / "used_to
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODELS = (
     "openai/gpt-oss-120b",
+    "qwen/qwen3.8-27b",
     "openai/gpt-oss-20b",
-    "qwen/qwen3.6-27b",
 )
 MIN_SCRIPT_WORDS = 122
 MAX_SCRIPT_WORDS = 148
