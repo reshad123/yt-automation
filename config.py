@@ -116,7 +116,7 @@ MIN_DURATION_SECONDS = 40
 # 55s is TTS jitter only. GuyNeural can land 1-3s past 52 on a 130-word read.
 MAX_DURATION_SECONDS = 55
 # Spoken at the end of every Short. Captions follow the voice.
-END_CTA = "Follow this channel if you enjoy this kind of stuff."
+END_CTA = "Subscribe to this channel for a new answer every day."
 FONT_SIZE = 60
 CAPTION_COLOR = "white"
 CAPTION_HIGHLIGHT_COLOR = "#FFD700"
