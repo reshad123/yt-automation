@@ -8,6 +8,7 @@ Set it as the GROQ_API_KEY environment variable / GitHub secret.
 
 import os
 import json
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -17,15 +18,20 @@ from config import END_CTA, TARGET_DURATION_SECONDS
 USED_TOPICS_PATH = Path(__file__).resolve().parent.parent / "reports" / "used_topics.json"
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
+# Only the two models Groq currently offers on the free tier.
+# 120b appears twice so it gets 2 of every 3 attempts (20b often fails JSON).
 GROQ_MODELS = (
     "openai/gpt-oss-120b",
+    "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
-    "qwen/qwen3-32b",
 )
 MIN_SCRIPT_WORDS = 122
 MAX_SCRIPT_WORDS = 148
 SCRIPT_ATTEMPTS = 9
 RECENT_SUBJECT_WINDOW = 40
+AVOID_LIST_SIZE = 60
+RETRY_PAUSE_SECONDS = 4
+RATE_LIMIT_PAUSE_SECONDS = 12
 
 
 def _with_cta(script: str) -> str:
@@ -112,16 +118,18 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
         '"topic_key": "<short lowercase phrase naming the exact fact>"}'
     )
 
-    avoid = "; ".join(used[:40]) if used else "none yet"
+    # Show the AI the NEWEST entries (not the oldest) so it avoids recent repeats.
+    avoid = "; ".join(used[-AVOID_LIST_SIZE:]) if used else "none yet"
     user_prompt = (
         f"Write {topic['prompt_hint']}\n"
         f"Make the hook the strongest line in the script. "
         f"Target about {TARGET_DURATION_SECONDS} seconds spoken. "
         f"Write enough for a {TARGET_DURATION_SECONDS} second read-aloud: "
         f"{MIN_SCRIPT_WORDS - 12}-{MAX_SCRIPT_WORDS - 12} words before the follow line. "
-        f"Do not reuse any of these already-posted facts or animals: {avoid}. "
-        f"If a fact about this general topic has already been used, pick a "
-        f"completely different animal, not just a different phrasing of the same fact."
+        f"These facts and animals were posted recently, so do NOT pick any "
+        f"of them or anything similar: {avoid}. "
+        f"Choose a completely different animal, not just a different "
+        f"phrasing of the same fact."
     )
     if length_hint:
         user_prompt += f"\n{length_hint}"
@@ -195,7 +203,9 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
         payload = {
             "model": model,
             "messages": messages,
-            "temperature": 0.7,
+            "temperature": 0.8,
+            "reasoning_effort": "low",
+            "max_completion_tokens": 2000,
         }
         if force_json:
             payload["response_format"] = {"type": "json_object"}
@@ -214,6 +224,8 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             return json.loads(resp.read().decode("utf-8"))
 
     for attempt in range(SCRIPT_ATTEMPTS):
+        if attempt > 0:
+            time.sleep(RETRY_PAUSE_SECONDS)
         model = GROQ_MODELS[attempt % len(GROQ_MODELS)]
         extra = ""
         if attempt > 0:
@@ -234,6 +246,9 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
             body = exc.read().decode("utf-8", errors="replace")[:400]
             last_error = f"{exc.code} {exc.reason}: {body}"
             print(f"Groq model {model} failed: {last_error}")
+            if exc.code == 429:
+                time.sleep(RATE_LIMIT_PAUSE_SECONDS)
+                continue
             if "json_validate_failed" not in body:
                 continue
             try:
@@ -243,6 +258,8 @@ def generate_script(topic: dict, length_hint: str = "") -> dict:
                 retry_body = retry_exc.read().decode("utf-8", errors="replace")[:400]
                 last_error = f"{retry_exc.code} {retry_exc.reason}: {retry_body}"
                 print(f"Groq model {model} failed: {last_error}")
+                if retry_exc.code == 429:
+                    time.sleep(RATE_LIMIT_PAUSE_SECONDS)
                 continue
 
         content = (result["choices"][0]["message"]["content"] or "").strip()
