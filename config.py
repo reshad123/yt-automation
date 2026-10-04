@@ -34,10 +34,13 @@ TOPICS = [
      {
         "niche": "pets_and_farm",
         "prompt_hint": (
-            "one surprising, verifiable fact about a common pet or farm "
-            "animal (dog, cat, horse, cow, chicken, rabbit, etc). The animal "
-            "should be instantly recognizable, but the fact must be "
-            "genuinely surprising."
+            "one surprising, verifiable fact about a familiar animal that "
+            "people recognize: pets, farm animals, birds, or well-known "
+            "wildlife (pig, goat, sheep, duck, donkey, goose, turkey, "
+            "parrot, hamster, goldfish, bee, ant, owl, fox, deer, squirrel, "
+            "penguin, dolphin, and similar). Pick an animal that has NOT "
+            "been covered recently. The animal should be instantly "
+            "recognizable, but the fact must be genuinely surprising."
         ),
         "visual_keywords": [
             "dog closeup",
