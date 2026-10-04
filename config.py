@@ -122,7 +122,7 @@ CAPTION_COLOR = "white"
 CAPTION_HIGHLIGHT_COLOR = "#FFD700"
 
 # TTS voice (edge-tts). Full list: `edge-tts --list-voices`
-TTS_VOICE = "en-US-GuyNeural"
+TTS_VOICE = "en-US-AndrewNeural"
 
 # Output paths
 WORKDIR = "workdir"
