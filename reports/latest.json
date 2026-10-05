@@ -1,194 +1,230 @@
 {
-  "generated_at": "2026-09-30T14:28:28.016060+00:00",
+  "generated_at": "2026-10-05T21:45:18.453932+00:00",
   "period": {
-    "week_start": "2026-09-23",
-    "month_start": "2026-09-02",
-    "end": "2026-09-29"
+    "week_start": "2026-09-28",
+    "month_start": "2026-09-07",
+    "end": "2026-10-04"
   },
   "channel": {
     "id": "UC6JlX3lps3k-ygVvNwULyKA",
     "title": "How Come?",
-    "subscribers": 3,
+    "subscribers": 142,
     "hidden_subscribers": false,
-    "total_views": 2643,
-    "video_count": 22
+    "total_views": 25177,
+    "video_count": 49
   },
   "last_7_days": {
-    "views": 6,
-    "watch_minutes": 0,
-    "subs_gained": 0,
-    "subs_lost": 0,
-    "likes": 0,
-    "comments": 0,
-    "shares": 0,
-    "avg_view_seconds": 6,
-    "avg_view_percent": 13.9
+    "views": 19760,
+    "watch_minutes": 5714,
+    "subs_gained": 119,
+    "subs_lost": 6,
+    "likes": 1251,
+    "comments": 20,
+    "shares": 38,
+    "avg_view_seconds": 28,
+    "avg_view_percent": 59.7
   },
   "last_28_days": {
-    "views": 2645,
-    "watch_minutes": 418,
-    "subs_gained": 4,
-    "subs_lost": 1
+    "views": 22404,
+    "watch_minutes": 6132,
+    "subs_gained": 123,
+    "subs_lost": 7
   },
   "top_videos": [
     {
-      "id": "nUJ33-RO6kE",
-      "title": "How Come a Shrimp Snaps a Bubble Hotter Than Sun?",
-      "views": 3,
-      "watch_minutes": 0,
-      "avg_view_percent": 13.2,
-      "likes": 0,
-      "url": "https://www.youtube.com/watch?v=nUJ33-RO6kE"
+      "id": "vki0qLRft4Q",
+      "title": "How Come Chickens Can Tell Human Faces?",
+      "views": 1486,
+      "watch_minutes": 457,
+      "avg_view_percent": 63.9,
+      "likes": 93,
+      "url": "https://www.youtube.com/watch?v=vki0qLRft4Q"
     },
     {
-      "id": "DybcgfGOgH8",
-      "title": "How Come You Get Goosebumps When You\u2019re Scared?",
-      "views": 2,
-      "watch_minutes": 0,
-      "avg_view_percent": 15.3,
-      "likes": 0,
-      "url": "https://www.youtube.com/watch?v=DybcgfGOgH8"
+      "id": "TmIksCBd2B8",
+      "title": "How Come a Chicken Can See in the Dark?",
+      "views": 1352,
+      "watch_minutes": 373,
+      "avg_view_percent": 55.3,
+      "likes": 80,
+      "url": "https://www.youtube.com/watch?v=TmIksCBd2B8"
     },
     {
-      "id": "8C0Z00KtSCs",
-      "title": "How Come Your Nose Chooses a Side to Breathe?",
-      "views": 1,
-      "watch_minutes": 0,
-      "avg_view_percent": 0.0,
-      "likes": 0,
-      "url": "https://www.youtube.com/watch?v=8C0Z00KtSCs"
+      "id": "frPad2Bj_ug",
+      "title": "How Come Cows Have Best Friends?",
+      "views": 1349,
+      "watch_minutes": 453,
+      "avg_view_percent": 65.0,
+      "likes": 108,
+      "url": "https://www.youtube.com/watch?v=frPad2Bj_ug"
     },
     {
-      "id": "LCi6tMJWyig",
-      "title": "How Come Tuatara Has a Third Eye?",
-      "views": 0,
-      "watch_minutes": 0,
-      "avg_view_percent": 0.0,
-      "likes": 0,
-      "url": "https://www.youtube.com/watch?v=LCi6tMJWyig"
+      "id": "eipioVhPlfw",
+      "title": "How Come Dogs Have Unique Nose Prints?",
+      "views": 1323,
+      "watch_minutes": 311,
+      "avg_view_percent": 46.5,
+      "likes": 65,
+      "url": "https://www.youtube.com/watch?v=eipioVhPlfw"
+    },
+    {
+      "id": "uxVs4DUEUx4",
+      "title": "How Come Horses Can Sleep Standing Up?",
+      "views": 1302,
+      "watch_minutes": 443,
+      "avg_view_percent": 64.8,
+      "likes": 93,
+      "url": "https://www.youtube.com/watch?v=uxVs4DUEUx4"
+    },
+    {
+      "id": "VoVwuBvjZOw",
+      "title": "How Come Elephants Predict Rain From Miles Away?",
+      "views": 1283,
+      "watch_minutes": 369,
+      "avg_view_percent": 59.5,
+      "likes": 85,
+      "url": "https://www.youtube.com/watch?v=VoVwuBvjZOw"
+    },
+    {
+      "id": "_vRykqe-Ft8",
+      "title": "How Come Elephants Hear Rainstorms From Miles Away?",
+      "views": 1234,
+      "watch_minutes": 415,
+      "avg_view_percent": 66.0,
+      "likes": 104,
+      "url": "https://www.youtube.com/watch?v=_vRykqe-Ft8"
+    },
+    {
+      "id": "_NImXEjUqi0",
+      "title": "How Come Chickens Recognize Hundreds of Faces?",
+      "views": 1196,
+      "watch_minutes": 378,
+      "avg_view_percent": 67.1,
+      "likes": 63,
+      "url": "https://www.youtube.com/watch?v=_NImXEjUqi0"
     }
   ],
   "analytics_error": null,
   "recent_uploads": [
     {
-      "id": "WrUn5_seCS0",
-      "title": "How Come Your Skin Forms Tiny Armor When Cold?",
-      "published_at": "2026-09-30T14:22:09Z",
+      "id": "o_aJEOAC--k",
+      "title": "How Come Giraffes Can Pump Blood Up Their 6\u2011Foot Neck?",
+      "published_at": "2026-10-05T20:27:51Z",
+      "duration_seconds": 54,
+      "views": 96,
+      "likes": 20,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=o_aJEOAC--k"
+    },
+    {
+      "id": "AiTJ-X4baO0",
+      "title": "How Come Pigeons Have Built\u2011In GPS?",
+      "published_at": "2026-10-05T17:23:53Z",
+      "duration_seconds": 55,
+      "views": 145,
+      "likes": 13,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=AiTJ-X4baO0"
+    },
+    {
+      "id": "jkLYYjy1zqk",
+      "title": "How Come Hummingbirds Hover Perfectly?",
+      "published_at": "2026-10-05T06:47:34Z",
+      "duration_seconds": 51,
+      "views": 223,
+      "likes": 22,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=jkLYYjy1zqk"
+    },
+    {
+      "id": "e0wv_FUDOQE",
+      "title": "How Come Dogs Detect Humidity and Predict Rain?",
+      "published_at": "2026-10-05T05:30:57Z",
       "duration_seconds": 48,
-      "views": 1,
-      "likes": 0,
+      "views": 393,
+      "likes": 36,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=WrUn5_seCS0"
+      "url": "https://www.youtube.com/watch?v=e0wv_FUDOQE"
     },
     {
-      "id": "LCi6tMJWyig",
-      "title": "How Come Tuatara Has a Third Eye?",
-      "published_at": "2026-09-22T05:50:07Z",
-      "duration_seconds": 52,
-      "views": 1,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=LCi6tMJWyig"
+      "id": "W8yTlC1kbO4",
+      "title": "How Come The Badger Can Find Food Under Snow?",
+      "published_at": "2026-10-04T22:19:02Z",
+      "duration_seconds": 53,
+      "views": 357,
+      "likes": 10,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=W8yTlC1kbO4"
     },
     {
-      "id": "DybcgfGOgH8",
-      "title": "How Come You Get Goosebumps When You\u2019re Scared?",
-      "published_at": "2026-09-21T22:27:39Z",
-      "duration_seconds": 45,
-      "views": 4,
-      "likes": 0,
+      "id": "VUmhOLvmu2U",
+      "title": "How Come a Dolphin's Melon Focuses Sound Like a Telescope?",
+      "published_at": "2026-10-04T16:29:35Z",
+      "duration_seconds": 48,
+      "views": 968,
+      "likes": 61,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=DybcgfGOgH8"
+      "url": "https://www.youtube.com/watch?v=VUmhOLvmu2U"
     },
     {
-      "id": "nUJ33-RO6kE",
-      "title": "How Come a Shrimp Snaps a Bubble Hotter Than Sun?",
-      "published_at": "2026-09-21T18:02:32Z",
+      "id": "asCiFSodhI4",
+      "title": "How Come Crows Build Bridges to Get Food?",
+      "published_at": "2026-10-04T14:55:18Z",
       "duration_seconds": 47,
-      "views": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=nUJ33-RO6kE"
+      "views": 720,
+      "likes": 50,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=asCiFSodhI4"
     },
     {
-      "id": "z1qWeF579xY",
-      "title": "How Come a Day on Venus Is Longer Than Its Year?",
-      "published_at": "2026-09-21T05:51:50Z",
+      "id": "_ho9zjMiHWk",
+      "title": "How Come Parrots Can Mimic Human Voices Perfectly?",
+      "published_at": "2026-10-04T08:36:55Z",
       "duration_seconds": 47,
-      "views": 4,
-      "likes": 0,
+      "views": 1045,
+      "likes": 60,
       "comments": 0,
-      "url": "https://www.youtube.com/watch?v=z1qWeF579xY"
+      "url": "https://www.youtube.com/watch?v=_ho9zjMiHWk"
     },
     {
-      "id": "eHC_CwsbhpM",
-      "title": "How Come Tuatara Have a Third Eye?",
-      "published_at": "2026-09-20T21:12:42Z",
-      "duration_seconds": 47,
-      "views": 3,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=eHC_CwsbhpM"
+      "id": "_vRykqe-Ft8",
+      "title": "How Come Elephants Hear Rainstorms From Miles Away?",
+      "published_at": "2026-10-03T23:51:36Z",
+      "duration_seconds": 51,
+      "views": 1254,
+      "likes": 103,
+      "comments": 3,
+      "url": "https://www.youtube.com/watch?v=_vRykqe-Ft8"
     },
     {
-      "id": "K1CqNGbsN2Y",
-      "title": "How Come Venus Spins Backwards?",
-      "published_at": "2026-09-20T15:41:52Z",
+      "id": "t-of79YvWRc",
+      "title": "How Come Cats Can Make Over 100 Sounds?",
+      "published_at": "2026-10-03T18:25:10Z",
+      "duration_seconds": 48,
+      "views": 1009,
+      "likes": 52,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=t-of79YvWRc"
+    },
+    {
+      "id": "6w2RqSTqmtk",
+      "title": "How Come Dog Footprints Steam on Cold Mornings?",
+      "published_at": "2026-10-03T15:44:09Z",
+      "duration_seconds": 44,
+      "views": 1140,
+      "likes": 75,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=6w2RqSTqmtk"
+    },
+    {
+      "id": "TmIksCBd2B8",
+      "title": "How Come a Chicken Can See in the Dark?",
+      "published_at": "2026-10-03T11:43:44Z",
       "duration_seconds": 49,
-      "views": 3,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=K1CqNGbsN2Y"
-    },
-    {
-      "id": "-B63lgYKpsI",
-      "title": "How Come Your Stomach Regenerates Every Few Days?",
-      "published_at": "2026-09-20T05:41:58Z",
-      "duration_seconds": 46,
-      "views": 1,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=-B63lgYKpsI"
-    },
-    {
-      "id": "z7V3m6ew2aE",
-      "title": "How Come Your Tailbone Hurts When You Sit?",
-      "published_at": "2026-09-19T15:35:18Z",
-      "duration_seconds": 43,
-      "views": 25,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=z7V3m6ew2aE"
-    },
-    {
-      "id": "yyf7kHDCYqY",
-      "title": "How Come Yeti Crab Farms Bacteria on Its Claws?",
-      "published_at": "2026-09-19T05:27:21Z",
-      "duration_seconds": 47,
-      "views": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=yyf7kHDCYqY"
-    },
-    {
-      "id": "W6VTF4SUrD0",
-      "title": "How Come Your Heart Beats Without Your Brain?",
-      "published_at": "2026-09-18T21:27:16Z",
-      "duration_seconds": 47,
-      "views": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=W6VTF4SUrD0"
-    },
-    {
-      "id": "2omUJk0-SPw",
-      "title": "How Come the Solenodon Has a Venomous Bite?",
-      "published_at": "2026-09-18T16:03:54Z",
-      "duration_seconds": 46,
-      "views": 2,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.youtube.com/watch?v=2omUJk0-SPw"
+      "views": 1360,
+      "likes": 81,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=TmIksCBd2B8"
     }
   ]
 }
