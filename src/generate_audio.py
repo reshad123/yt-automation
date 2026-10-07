@@ -22,12 +22,16 @@ TTS_VOICES = (TTS_VOICE, "en-US-ChristopherNeural", "en-GB-RyanNeural")
 TTS_ATTEMPTS = 5
 MIN_AUDIO_BYTES = 4000
 MIN_SPOKEN_SECONDS = 5.0
+TTS_RATE = "-5%"
+TTS_PITCH = "-2Hz"
 
 
 async def _synthesize(text: str, out_mp3: str, voice: str):
     communicate = edge_tts.Communicate(
         text,
         voice,
+        rate=TTS_RATE,
+        pitch=TTS_PITCH,
         boundary="WordBoundary",
         connect_timeout=20,
     )
