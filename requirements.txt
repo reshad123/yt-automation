@@ -2,3 +2,5 @@ edge-tts>=7.2.0
 moviepy>=1.0.3
 google-auth-oauthlib>=1.2.0
 python-dotenv>=1.0.1
+kokoro>=0.9.4
+soundfile
