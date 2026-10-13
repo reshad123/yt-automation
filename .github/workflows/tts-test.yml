@@ -52,7 +52,7 @@ jobs:
       - name: Make a test voice clip
         env:
           TTS_ENGINE: kokoro
-        run: python src/generate_audio.py
+        run: python -m src.generate_audio
 
       - uses: actions/upload-artifact@v4
         with:
