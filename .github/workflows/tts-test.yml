@@ -1,0 +1,60 @@
+name: TTS test (Kokoro)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Same static ffmpeg download your daily workflow uses (no apt for ffmpeg).
+      - name: Setup ffmpeg
+        run: |
+          set -euo pipefail
+          url="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz"
+          for i in 1 2 3 4 5; do
+            if curl -fL --retry 3 --retry-delay 2 -o /tmp/ffmpeg.tar.xz "$url"; then
+              break
+            fi
+            echo "ffmpeg download attempt $i failed"
+            sleep $((i * 3))
+          done
+          mkdir -p /tmp/ffmpeg-extract
+          tar -xJf /tmp/ffmpeg.tar.xz -C /tmp/ffmpeg-extract
+          bin_dir="$(find /tmp/ffmpeg-extract -type d -name bin -print -quit)"
+          sudo install -m 755 "$bin_dir/ffmpeg" /usr/local/bin/ffmpeg
+          sudo install -m 755 "$bin_dir/ffprobe" /usr/local/bin/ffprobe
+          ffmpeg -version | head -1
+
+      # Kokoro can use espeak-ng for rare words. Optional: if apt is slow, the test goes on without it.
+      - name: espeak-ng (optional)
+        run: timeout 180 sudo apt-get install -y espeak-ng || echo "espeak-ng not installed, continuing"
+
+      - name: Cache the voice model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: kokoro-model-v1
+
+      # CPU-only torch FIRST, so pip does not download the huge GPU build.
+      - name: Python packages
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+
+      - name: Make a test voice clip
+        env:
+          TTS_ENGINE: kokoro
+        run: python src/generate_audio.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tts-test
+          path: test.mp3
